@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact us.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="Header">
+        <div id="Logo" onclick="GoHome()">
+            <span class="y6">Y</span><span class="p">P</span><span class="y6">6</span>
+        </div>
+        <div id="NavBar">
+            <div id="LoggedIn">
+                <div id="Username">Howdy, Youssef</div>
+                <div id="Logout" class="Text_Button" onclick="SignFuckenOut()">Logout</div>
+            </div>
+            <div id="LoggedOut">
+
+            </div>
+            <div class="NavButton" onclick="GoHome()">Home</div>
+            <div>
+                <div class="NavButton" onmousedown="callmenu()">Store</div>
+                <div class="store-dropdown" id="store-dropdown">
+                    <div class="DropDownButton" onclick="GoCasual()">Casual</div>
+                    <div class="DropDownButton" onclick="GoFormal()">Formal</div>
+                    <div class="DropDownButton" onclick="GoCollections()">Collections</div>
+                    <div class="DropDownButton" onclick="GoAccessories()">Accessories</div>
+                </div>
+            </div>
+            <div class="NavButton" id="Register" onclick="RegEditAcc()">Register</div>
+            <div class="NavButton" onclick="GoContact()">Contact us</div>
+        </div>
+    </div>
+
+    <center>
+        <div>
+            <form class="Login-content animate container69">
+
+                <br><label for="name"><b>Name</b></label><br>
+                <input type="text" placeholder="Enter your name" name="name" class="Login-input" id="name" required><br>
+
+                <label for="PhoneNumber"><b>Phone Number</b></label><br>
+                <input type="PhoneNumber" placeholder="Enter your phone number" name="PhoneNumber" id="PhoneNumber" class="Login-input" required> <br>
+
+                <label for="E-mail"><b>E-mail</b></label><br>
+                <input type="E-mail" placeholder="Enter your E-mail adress" name="E-mail" id="E-mail" class="Login-input" required> <br>
+
+                <label for="fordanext"><b>Add something</b></label><br>
+                <input type="fordanext" placeholder="Enter a Comment" name="fordanext" id="contact" required><br>
+
+                <center>
+                    <button type="submit" id="contact-submit">Submit</button>
+                </center>
+            </form>
+
+        </div>
+    </center>
+
+
+    <div id="Login" class="Login">
+
+        <form class="Login-content animate" onsubmit="return setAction(this)">
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" class="Login-input" id="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" class="Login-input" required>
+                <div class="cancelbtn" onmousedown="SingFuckenIn()" style="text-align: center; font-size: 20pt;">Login</div>
+            </div>
+
+            <div class="container" style="background-color:#212227; color:#fff;">
+                <button type="button" onclick="Lundisplay()" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>YP<span>6</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a> ·
+                <a href="#">Blog</a> ·
+                <a href="#">Pricing</a> ·
+                <a href="#">About</a> ·
+                <a href="#">Faq</a> ·
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">YP6 &copy; 2020</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>21 Haram Street</span> Giza, Egypt</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>0123456789</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">contact@yp6.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the store</span> YP6 store is a clothes store, for men, women &amp; and childes.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

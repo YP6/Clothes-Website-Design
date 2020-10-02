@@ -1,0 +1,738 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 75% auto;
+    grid-template-rows: auto auto 100px;
+    background-color: #e4ecf0;
+    overflow-x: hidden;
+    background-image: url("Background.jpg");
+    background-repeat: repeat;
+}
+
+#Header {
+    grid-area: 1/1/2/4;
+    height: 115px;
+    background-color: #212227;
+    color: white;
+}
+
+label {
+    color: #212227;
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 15pt;
+}
+
+#Logo {
+    position: absolute;
+    width: max-content;
+    margin-top: -10px;
+    font-family: 'Pacifico', cursive;
+    margin-left: 30px;
+    font-size: 40pt;
+    font-weight: bolder;
+    color: #1880ff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.y6 {
+    color: white;
+    transition: all .50s;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #212227;
+}
+
+.p {
+    transition: all .40s;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #0021a5;
+}
+
+#Logo:hover .y6 {
+    font-size: 50pt;
+    color: #1880ff;
+    -webkit-text-stroke-color: #0021a5;
+}
+
+#Logo:hover .p {
+    font-size: 30pt;
+    color: white;
+    -webkit-text-stroke-color: #212227;
+}
+
+#NavBar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.NavButton {
+    cursor: pointer;
+    margin: 10px;
+    font-size: 25pt;
+    font-family: 'Bebas Neue', cursive;
+    transition: all .25s;
+    user-select: none;
+}
+
+.NavButton:hover {
+    color: #1880ff;
+    font-size: 30pt;
+}
+
+.Login-content {
+    background-color: #fefefe;
+    margin: 15% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.store-dropdown {
+    background-color: #ffffff;
+    padding: 2px;
+    padding-top: 4px;
+    position: absolute;
+    top: 76px;
+    right: 50%;
+    transform: translate(50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    visibility: hidden;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.DropDownButton {
+    cursor: pointer;
+    margin: 0px 15px 0px 15px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15pt;
+    transition: all .25s;
+    color: #212227;
+    user-select: none;
+}
+
+.DropDownButton:hover {
+    font-size: 17.5pt;
+    color: #1880ff;
+}
+
+.store-dropdown-items {
+    padding: 5px;
+    width: 151px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+#LoggedIn {
+    display: none;
+}
+
+#Username {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 15pt;
+    user-select: none;
+}
+
+#Logout {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    font-family: 'Pacifico', cursive;
+    font-size: 10pt;
+}
+
+.Text_Button {
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+}
+
+.Text_Button:hover {
+    color: #1880ff;
+}
+
+#Right-Content {
+    grid-area: 2/3/3/4;
+    width: max-content;
+    margin-right: -200px;
+    transition: margin 0.5s;
+}
+
+#Footer {
+    grid-area: 3/1/4/4;
+}
+
+#Center-Content {
+    grid-area: 2/1/3/3;
+    border: 2px solid black;
+    height: 100%;
+}
+
+#ClothesContainer {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+#Stores {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    visibility: hidden;
+    margin: -20%;
+    transition: margin 0.5s;
+}
+
+.Admin {
+    display: none;
+}
+
+.Product_Card {
+    margin: 0;
+    width: Calc(33% - 40px);
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.24);
+    transition: width 0.5s, height 0.5s, box-shadow 0.5s;
+}
+
+.Product_Card:hover {
+    width: Calc(36% - 40px);
+    height: 480px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+@media all and (max-width: 1400px) {
+    .Product_Card {
+        height: 300px;
+    }
+    .Product_Card:hover {
+        height: 330px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .Product_Card {
+        width: 40%;
+        height: 300px;
+    }
+    .Product_Card:hover {
+        width: calc(45% - 40px);
+        height: 330px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .Product_Card {
+        width: 50%;
+        height: 300px;
+    }
+    .Product_Card:hover {
+        width: calc(55%);
+        height: 330px;
+    }
+}
+
+.Product_Details {
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%, 0%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-flow: column nowrap;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+}
+
+.Product_Card:hover .Product_Details {
+    opacity: 1;
+}
+
+.Add_To_Cart {
+    margin: 0;
+    background-color: #393b44;
+    color: #1880ff;
+    font-size: 16px;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+}
+
+.Product_Card .Add_To_Cart:hover {
+    background-color: #1880ff;
+    color: #393b44;
+}
+
+.Product_Image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.Text_Above_Image_Container {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0%;
+    top: 70%;
+    color: white;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6824930655856092) 0%, rgba(0, 0, 0, 0.32394964821866246) 60%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 15px;
+}
+
+.Product_Card:hover .Text_Above_Image_Container {
+    opacity: 1;
+}
+
+.Text_Above_Image {
+    margin: 30px 0px 0px 10px;
+    font-size: 18pt;
+}
+
+.Before_Discount_Price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.Discount_Image {
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 0%;
+    transform: translate(100%, 0%);
+    object-fit: cover;
+    width: 30%;
+    border-radius: 15px;
+}
+
+#Cart {
+    border: 1px solid black;
+    height: auto;
+    grid-template-rows: 20px auto auto 1fr;
+    background-color: #ffffff00;
+}
+
+#CloseCart {
+    background-color: #393b44;
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+    color: #1880ff;
+    cursor: pointer;
+}
+
+#Cart_Info {
+    padding: 10px 0px 25px 0px;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 15pt;
+    background-color: #393b44;
+    color: #ffffffa6;
+    height: min-content;
+    font-family: 'Syne', cursive;
+}
+
+#Shopping_Cart_Image {
+    width: 50px;
+    height: 50px;
+    filter: invert(52%) sepia(79%) saturate(5777%) hue-rotate(203deg) brightness(105%) contrast(101%);
+}
+
+.Cart_Counter {
+    color: #1880ff;
+    font-family: 'Syne', cursive;
+}
+
+.ChoosedItemHiddenInfo {
+    display: none;
+}
+
+#TotalPayContainer {
+    border-bottom: 2px dotted black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    font-family: 'Lobster', cursive;
+    padding-top: 10px;
+    color: #23525e;
+    background-color: #ffffffa6;
+}
+
+#BuyNow {
+    background-color: #1880ff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #393b44;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.26);
+    font-family: 'Lobster', sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+#BuyNow:hover {
+    background-color: #393b44;
+    color: #1880ff;
+}
+
+#CartRecipt {
+    grid-row: 3/4;
+    padding: 0px 5px 0px 5px;
+    color: #27788c;
+    font-family: 'Courgette', cursive;
+    cursor: pointer;
+    background-color: #ffffffa6;
+}
+
+#FloatingShoppingCart {
+    width: auto;
+    height: 70px;
+    padding-right: 5px;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    right: 0;
+    top: 15%;
+    background-color: #393b44;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: display 1s;
+}
+
+#FloatingShoppingCart:hover {
+    background-color: #1880ff;
+    right: 50;
+}
+
+#FloatingShoppingCart img {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    filter: invert(52%) sepia(79%) saturate(5777%) hue-rotate(203deg) brightness(105%) contrast(101%);
+}
+
+#FloatingShoppingCart:hover img {
+    filter: invert(0%);
+}
+
+#FloatingShoppingCart:hover .rev {
+    color: #000000;
+}
+
+#FloatingShoppingCart div {
+    margin-top: -35px;
+}
+
+#ADD_Image {
+    background: linear-gradient(90deg, rgba(255, 0, 149, 0.219) 0%, rgba(195, 0, 255, 0.301) 50%, rgba(0, 0, 255, 0.315) 100%);
+}
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    cursor: pointer;
+    width: auto;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #1880ff;
+    color: #212227;
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 15pt;
+}
+
+.cancelbtn:hover {
+    background-color: #212227;
+    color: #1880ff;
+}
+
+
+/* Center the image and position the close button */
+
+.Xcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.container {
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.reg-input {
+    width: 99%;
+    height: 35px;
+    background-color: rgb(245, 245, 245);
+    opacity: 0.9;
+    border-radius: 10px;
+    border-color: #1880ff;
+}
+
+.reg-input:focus {
+    opacity: 1;
+    outline: none;
+}
+
+.Login {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    .psw {
+        display: block;
+        align-items: flex-end;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.Login-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 10px;
+    border-color: #1880ff;
+    box-sizing: border-box;
+}
+
+.Loginbutton {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20pt;
+    font-family: 'Bebas neue', sans-serif;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #5383d3;
+}
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #5383d3;
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+    .main {
+        line-height: normal;
+        font-size: auto;
+    }
+}

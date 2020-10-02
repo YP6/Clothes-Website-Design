@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Collections</title>
+
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <!--Header-->
+    <div id="Header">
+        <div id="Logo" onclick="GoHome()">
+            <span class="y6">Y</span><span class="p">P</span><span class="y6">6</span>
+        </div>
+        <div id="NavBar">
+            <div id="LoggedIn">
+                <div id="Username">Howdy, Youssef</div>
+                <div id="Logout" class="Text_Button" onclick="SignFuckenOut()">Logout</div>
+            </div>
+            <div id="LoggedOut">
+                <div id="Username" class="Text_Button" onclick="Ldisplay()">Login</div>
+            </div>
+            <div class="NavButton" onclick="GoHome()">Home</div>
+            <div>
+                <div class="NavButton" onmousedown="callmenu()">Store</div>
+                <div class="store-dropdown" id="store-dropdown">
+                    <div class="DropDownButton" onclick="GoCasual()">Casual</div>
+                    <div class="DropDownButton" onclick="GoFormal()">Formal</div>
+                    <div class="DropDownButton" onclick="GoCollections()">Collections</div>
+                    <div class="DropDownButton" onclick="GoAccessories()">Accessories</div>
+                </div>
+            </div>
+            <div class="NavButton" id="Register" onclick="RegEditAcc()">Register</div>
+            <div class="NavButton" onclick="GoContact()">Contact us</div>
+        </div>
+    </div>
+
+
+
+    <div id="Center-Content">
+        <div id="Filter">
+        </div>
+        <!--Clothes-->
+        <div id="ClothesContainer">
+
+            <div class="Product_Card">
+                <img src="Collection3.jpg" alt="Collection 1" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 1</div>
+                    <div class="Product_Details">
+                        <span class="Price">150$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">150</span><span class="ChoosedItemHiddenInfo">Collection 1</span></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Product_Card">
+                <img src="Collection4.jpg" alt="Collection 2" class="Product_Image">
+                <img src="Discount.png" alt="Discount" class="Discount_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 2</div>
+                    <div class="Product_Details">
+                        <span class="Before_Discount_Price">400$</span>
+                        <span class="Price">200$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">200</span><span class="ChoosedItemHiddenInfo">Collection 2</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection5.jpg" alt="Collection 3" class="Product_Image">
+                <img src="Discount.png" alt="Discount" class="Discount_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 3</div>
+                    <div class="Product_Details">
+                        <span class="Before_Discount_Price">350$</span>
+                        <span class="Price">300$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">300</span><span class="ChoosedItemHiddenInfo">Collection 3</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection6.jpg" alt="Collection 4" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 4</div>
+                    <div class="Product_Details">
+                        <span class="Price">230$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">230</span><span class="ChoosedItemHiddenInfo">Collection 4</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection7.jpg" alt="Collection 5" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 5</div>
+                    <div class="Product_Details">
+                        <span class="Price">250$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">250</span><span class="ChoosedItemHiddenInfo">Collection 5</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection8.jpg" alt="Collection 6" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 6</div>
+                    <div class="Product_Details">
+                        <span class="Price">275$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">275</span><span class="ChoosedItemHiddenInfo">Collection 6</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection9.jpg" alt="Collection 7" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 7</div>
+                    <div class="Product_Details">
+                        <span class="Price">235$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">235</span><span class="ChoosedItemHiddenInfo">Collection 7</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection10.jpg" alt="Collection 8" class="Product_Image">
+                <img src="Discount.png" alt="Discount" class="Discount_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 8</div>
+                    <div class="Product_Details">
+                        <span class="Before_Discount_Price">500$</span>
+                        <span class="Price">250$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">250</span><span class="ChoosedItemHiddenInfo">Collection 8</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Product_Card">
+                <img src="Collection11.jpg" alt="Collection 9" class="Product_Image">
+                <img src="Discount.png" alt="Discount" class="Discount_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 9</div>
+                    <div class="Product_Details">
+                        <span class="Before_Discount_Price">600$</span>
+                        <span class="Price">300$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">300</span><span class="ChoosedItemHiddenInfo">Collection 9</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="Product_Card">
+                <img src="Collection12.jpg" alt="Collection 10" class="Product_Image">
+                <img src="Discount.png" alt="Discount" class="Discount_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 10</div>
+                    <div class="Product_Details">
+                        <span class="Before_Discount_Price">400$</span>
+                        <span class="Price">175$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">175</span><span class="ChoosedItemHiddenInfo">Collection 10</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="Product_Card">
+                <img src="Collection13.jpg" alt="Collection 11" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 11</div>
+                    <div class="Product_Details">
+                        <span class="Price">225$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">225</span><span class="ChoosedItemHiddenInfo">Collection 11</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="Product_Card">
+                <img src="Collection14.jpeg" alt="Collection 12" class="Product_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 12</div>
+                    <div class="Product_Details">
+                        <span class="Price">300$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">300</span><span class="ChoosedItemHiddenInfo">Collection 12</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="Product_Card">
+                <img src="Collection15.jpg" alt="Collection 13" class="Product_Image">
+                <img src="Discount.png" alt="Discount" class="Discount_Image">
+                <div class="Text_Above_Image_Container">
+                    <div class="Text_Above_Image">Collection 13</div>
+                    <div class="Product_Details">
+                        <span class="Before_Discount_Price">550$</span>
+                        <span class="Price">300$</span>
+                        <button class="Add_To_Cart" onclick="AddToCart()">Add to cart <span class="ChoosedItemHiddenInfo">300</span><span class="ChoosedItemHiddenInfo">Collection 13</span></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Admin Product_Card" onclick="OpenEdit()">
+                <img src="ADD.png" alt="ADD" class="Product_Image" id="ADD_Image">
+            </div>
+        </div>
+    </div>
+
+    <div id="Right-Content">
+
+        <!--Cart-->
+
+        <div id="Cart">
+            <div id="CloseCart" onclick="ShowCart()">
+                Hide >
+            </div>
+            <div id="Cart_Info">Shopping <img src="shopping-cart.png" alt="Shopping" id="Shopping_Cart_Image">
+                <div class="Cart_Counter">0</div>
+            </div>
+            <div id="TotalPayContainer">
+                <div>
+                    <span>Total Pay: </span>
+                    <span id="TotalPay">&nbsp;0$</span>
+                </div>
+                <br><button id="BuyNow" onclick="BuyNow()">Buy Now</button>
+            </div>
+            <div id="CartRecipt">
+            </div>
+        </div>
+    </div>
+
+
+    <!--Forms-->
+
+    <div id="Login" class="Login">
+
+        <form class="Login-content animate" onsubmit="return setAction(this)">
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" class="Login-input" id="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" class="Login-input" required>
+                <div class="cancelbtn" onmousedown="SingFuckenIn()" style="text-align: center; font-size: 20pt;">Login</div>
+            </div>
+
+            <div class="container" style="background-color:#212227; color:#fff;">
+                <button type="button" onclick="Lundisplay()" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <div id="EDIT" class="Login">
+        <form style="background-color:#f1f1f1;" class="Login-content animate">
+
+
+
+            <div class="container">
+
+                <label for="ProductName">ProductName:</label>
+                <input type="text" id="ProductName" name="ProductName" class="reg-input" placeholder="Enter Product Name" required><br><br>
+
+                <label for="Price">Price:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" id="Price" name="Price" class="reg-input" placeholder="Enter the product price" required><br><br>
+
+                <label for="photoLink">Link:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="photoLink" name="photoLink" class="reg-input" placeholder="Enter the product's photo link" required><br><br>
+
+                <label for="discount">Discount:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="discount" name="discount" class="reg-input" placeholder="Enter the discount amount if there is discount" required><br><br>
+
+                <div class="cancelbtn" style="text-align: center;" onclick="ADD()">Publish</div>
+
+            </div>
+            <div class="container" style="background-color:#212227;; color:#fff;">
+                <button type="button" onclick="Eundisplay()" class="cancelbtn">Cancel</button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1; padding: 0px;"> </div>
+        </form>
+    </div>
+
+    <div id="Buy" class="Login">
+        <form style="background-color:#f1f1f1;" class="Login-content animate">
+
+            <div class="container">
+                <label for="name">Name:</label>
+                <input class="reg-input" type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+                <label for="Adress">Adress:</label>
+                <input class="reg-input" type="text" id="Adress" name="Adress" placeholder="Enter your address"><br><br>
+
+                <label for="PhoneNumber">Phone Number:</label>
+                <input class="reg-input" type="Price" id="PhoneNumber" name="PhoneNumber" placeholder="Enter the PhoneNumber"><br><br>
+
+                <input class="cancelbtn" style="text-align: center; font-size: 20pt; width: 100%;" type="submit" value="Submit" id="submit">
+            </div>
+            <div class="container" style="background-color:#212227; color:#fff;">
+                <button type="button" onclick="Bundisplay()" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="Footer">
+        <div class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3>YP<span>6</span></h3>
+
+                <p class="footer-links">
+                    <a href="#">Home</a> ·
+                    <a href="#">Blog</a> ·
+                    <a href="#">Pricing</a> ·
+                    <a href="#">About</a> ·
+                    <a href="#">Faq</a> ·
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">YP6 &copy; 2020</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>21 Haram Street</span> Giza, Egypt</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>0123456789</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">contact@yp6.com</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About the store</span> YP6 store is a clothes store, for men, women &amp; and childes.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="FloatingShoppingCart" onclick="ShowCart()">
+        <img src="shopping-cart.png" alt="Shopping">
+        <div class="Cart_Counter rev">0</div>
+    </div>
+</body>
+
+</html>
