@@ -1,5 +1,5 @@
 # Clothes website Design:
-- YP6 is a front-end project for the web development summer training offered by FCIS-ASU.
+- YP6 is a front-end project for the web development summer training offered by FCIS-ASU implemented using HTML, CSS and JavaScript.
 - Click <a href="https://youssefkh-001.github.io/Clothes-Website-Design/index.html">here</a> to view the project.
 
 ## Features:
